@@ -1,16 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.poo;
 
-/**
- *
- * @author SCIS2PC22
- */
 public class Poo {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Character homero = new Character("Homero", "Inspector de seguridad nuclear", 33, "A la grande le puse cuca");
+       homero.greeting ();
+        System.out.println(homero.age);
+        
+        Character Bart = new Character("Bartolomeo", "Vago", 10, "Ay Caramba");
+        Bart.greeting();
+    }
+    
+      
+        
+    static class Character {
+        String name;
+        String occupation;
+        int age;
+        String phrase;
+
+        public Character(String name, String occupation, int age, String phrase) {
+            this.name = name;
+            this.occupation = occupation;
+            this.age = age;
+            this.phrase = phrase;
+        }
+       
+        void greeting(){
+              System.out.println(this.phrase);
+               
+          }        
+        
     }
 }
